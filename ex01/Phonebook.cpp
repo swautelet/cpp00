@@ -16,7 +16,15 @@ void	Phonebook::addcontact(contact con)
 	this->i++;
 }
 
-contact Phonebook::searchcontact(char *str)
+void Phonebook::searchcontact(int i)
 {
-
+	if (i < 1 || i > 8)
+	{
+		std::cout << "Invalid contact number" << std::endl;
+		return ;
+	}
+	else
+	{
+		contacts[i].displaycont();
+	}
 }
