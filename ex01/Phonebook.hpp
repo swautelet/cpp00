@@ -9,7 +9,7 @@ class Phonebook {
 		Phonebook();
 		~Phonebook();
 		void	addcontact(std::string firstname, std::string lastname, std::string nickname, std::string phone, std::string darkestsecret);
-		void	searchcontact(int i);
+		void	searchcontact(char i);
 		void	displaylist();
 
 	private:

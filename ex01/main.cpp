@@ -10,7 +10,7 @@ int	main()
 	std::string nickname;
 	std::string phone;
 	std::string darkestsecret;
-	int i;
+	char i;
 	Phonebook book;
 
 	while (str != "EXIT")
@@ -35,10 +35,22 @@ int	main()
 		{
 			book.displaylist();
 			std::cout  << "Enter the numero of the contact  you want to see : ";
-			if (std::cin >> i)
-				book.searchcontact(i);
-			else
-				std::cout << "Invalid parameter" << std::endl;
+			std::cin >> i;
+			switch (i)
+			{
+				case '1':
+				case '2':
+				case '3':
+				case '4':
+				case '5':
+				case '6':
+				case '7':
+				case '8':
+					book.searchcontact(i);
+				break ;
+				default:
+					std::cout << "Ivalid output" << std::endl;
+			}
 		}
 		else if (str != "EXIT")
 		{

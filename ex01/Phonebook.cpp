@@ -29,16 +29,19 @@ void	Phonebook::addcontact(std::string firstname, std::string lastname, std::str
 	}
 }
 
-void Phonebook::searchcontact(int i)
+void Phonebook::searchcontact(char i)
 {
-	if (i < 1 || i > 8)
+	int	convert;
+
+	convert = i - 48;
+	if (convert < 1 || convert > 8)
 	{
 		std::cout << "Invalid contact number" << std::endl;
 		return ;
 	}
 	else
 	{
-		list[i - 1].displaycont();
+		list[convert - 1].displaycont();
 	}
 }
 
