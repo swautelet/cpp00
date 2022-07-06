@@ -1,6 +1,6 @@
-#include "contact.hpp"
+#include "Contact.hpp"
 
-contact::contact(int i, char *firstna, char *lastna, char *nickna) index(i), firstname(firstna), lastna(lastname), nickname(nickna)
+contact::contact(void)
 {
 	return ;
 }
@@ -16,4 +16,16 @@ void	contact::displaycont(void)
 	std::cout << this->firstname << std::endl;
 	std::cout << this->lastname << std::endl;
 	std::cout << this->nickname << std::endl;
+}
+
+void	contact::setindex(int i)
+{
+	this->index = i;
+}
+
+void	contact::setnames(std::string firstname, std::string lastname, std::string nickname)
+{
+	this->firstname = firstname;
+	this->lastname = lastname;
+	this->nickname = nickname;
 }

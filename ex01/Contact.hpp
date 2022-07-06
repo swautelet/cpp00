@@ -1,16 +1,20 @@
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
+# include <iostream>
 
 class contact{
 	public:
-		contact(int i, char *firstna, char *lastna, char *nickna);
+		contact();
 		~contact();
-		char *firstname;
 		void	displaycont();
+		void	setindex(int i);
+		void	setnames(std::string firstname, std::string lastname, std ::string nickname);
+
 	private:
 		int	index;
-		char *lastname;
-		char *nickname;
+		std::string firstname;
+		std::string lastname;
+		std::string nickname;
 };
 
 #endif
