@@ -36,3 +36,41 @@ void	contact::setnames(std::string firstname, std::string lastname, std::string 
 	this->phone = phone;
 	this->darkestsecret = darkestsecret;
 }
+
+void	contact::minidisplay(void)
+{
+	std::cout << this->index << "         |";
+	if (this->firstname.length() > 10)
+	{
+		std::cout << this->firstname.substr(0, 9) << ".|";
+	}
+	else
+	{
+		std::cout << this->firstname;
+		for (unsigned long len = 10; len > this->firstname.length(); len--)
+			std::cout << " ";
+		std::cout << "|";
+	}
+	if (this->lastname.length() > 10)
+	{
+		std::cout << this->lastname.substr(0, 9) << ".|";
+	}
+	else
+	{
+		std::cout << this->lastname;
+		for (unsigned long len = 10; len > this->lastname.length(); len--)
+			std::cout << " ";
+		std::cout << "|";
+	}
+	if (this->nickname.length() > 10)
+	{
+		std::cout << this->nickname.substr(0, 9) << ".";
+	}
+	else
+	{
+		std::cout << this->nickname;
+		for (unsigned long len = 10; len > this->nickname.length(); len--)
+			std::cout << " ";
+	}
+	std::cout << std::endl;
+}

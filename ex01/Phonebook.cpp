@@ -41,3 +41,11 @@ void Phonebook::searchcontact(int i)
 		list[i - 1].displaycont();
 	}
 }
+
+void Phonebook::displaylist(void)
+{
+	for (int i = 0; i < 8; i++)
+	{
+		list[i].minidisplay();
+	}
+}

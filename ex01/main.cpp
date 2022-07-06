@@ -33,9 +33,12 @@ int	main()
 		}
 		else if (str == "SEARCH")
 		{
-			std::cout  <<"Enter the numero of the contact  you want to see : ";
-			std::cin >> i;
-			book.searchcontact(i);
+			book.displaylist();
+			std::cout  << "Enter the numero of the contact  you want to see : ";
+			if (std::cin >> i)
+				book.searchcontact(i);
+			else
+				std::cout << "Invalid parameter" << std::endl;
 		}
 		else if (str != "EXIT")
 		{

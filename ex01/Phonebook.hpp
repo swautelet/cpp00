@@ -10,6 +10,7 @@ class Phonebook {
 		~Phonebook();
 		void	addcontact(std::string firstname, std::string lastname, std::string nickname, std::string phone, std::string darkestsecret);
 		void	searchcontact(int i);
+		void	displaylist();
 
 	private:
 		contact list[8];

@@ -9,6 +9,7 @@ class contact{
 		void	displaycont();
 		void	setindex(int i);
 		void	setnames(std::string firstname, std::string lastname, std ::string nickname, std::string phone, std::string darkestsecret);
+		void	minidisplay();
 
 	private:
 		int	index;
