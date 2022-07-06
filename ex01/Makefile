@@ -21,5 +21,6 @@ re : fclean all
 
 save :
 	git commit -am "$(MAKECMDGOALS)"
+	git push
 
 .phony : fclean clean re all
