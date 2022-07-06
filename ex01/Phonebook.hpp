@@ -8,7 +8,7 @@ class Phonebook {
 	public:
 		Phonebook();
 		~Phonebook();
-		void	addcontact(std::string firstname, std::string lastname, std::string nickname);
+		void	addcontact(std::string firstname, std::string lastname, std::string nickname, std::string phone, std::string darkestsecret);
 		void	searchcontact(int i);
 
 	private:

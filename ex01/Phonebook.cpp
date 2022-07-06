@@ -8,7 +8,7 @@ Phonebook::Phonebook(void)
 	// contact list[8];
 	while (ind < 8)
 	{
-		list[ind].setindex(ind);
+		list[ind].setindex(ind + 1);
 		ind++;
 	}
 	// this->list = list;
@@ -19,9 +19,9 @@ Phonebook::~Phonebook(void)
 
 }
 
-void	Phonebook::addcontact(std::string firstname, std::string lastname, std::string nickname)
+void	Phonebook::addcontact(std::string firstname, std::string lastname, std::string nickname, std::string phone, std::string darkestsecret)
 {
-	this->list[this->i].setnames(firstname, lastname, nickname);
+	this->list[this->i].setnames(firstname, lastname, nickname, phone, darkestsecret);
 	this->i++;
 	if (this->i >= 8)
 	{
@@ -38,6 +38,6 @@ void Phonebook::searchcontact(int i)
 	}
 	else
 	{
-		list[i].displaycont();
+		list[i - 1].displaycont();
 	}
 }

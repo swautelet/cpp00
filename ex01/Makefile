@@ -19,4 +19,7 @@ fclean : clean
 
 re : fclean all
 
+save :
+	git commit -am "$(MAKECMDGOALS)"
+
 .phony : fclean clean re all
