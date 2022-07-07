@@ -4,3 +4,5 @@
 **/**.DS_STORE
 megaphone
 Phonebook
+**/**.log
+accounttest
