@@ -24,7 +24,8 @@ Account::~Account(void)
 
 void	Account::_displayTimestamp( void )
 {
-	std::cout << std::time(0);
+	std::time_t ti = std::time(0);
+	std::cout << "[" << ti << "]";
 }
 
 int	Account::getNbAccounts( void )
