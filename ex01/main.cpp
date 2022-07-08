@@ -21,10 +21,11 @@ int	main()
 	Phonebook book;
 	signal(SIGINT, signalhandler);
 
-	while (str != "EXIT")
+	std::cout << "Enter ADD to add a contact SEARCH to search a contact or EXIT to exit and loose all your contact :" << std::endl;
+	while (getline(std::cin, str))
 	{
-		std::cout << "Enter ADD to add a contact SEARCH to search a contact or EXIT to exit and loose all your contact :" << std::endl;
-		getline(std::cin, str);
+		
+		
 		if (str == "ADD")
 		{
 			std::cout << "Enter firstname :";
@@ -49,9 +50,14 @@ int	main()
 			else
 				std::cout << "Ivalid output" << std::endl;
 		}
-		else if (str != "EXIT")
+		else if (str == "EXIT")
+		{
+			break ;
+		}
+		else
 		{
 			std::cout << "Error wrong input" << std::endl;
 		}
+		std::cout << "Enter ADD to add a contact SEARCH to search a contact or EXIT to exit and loose all your contact :" << std::endl;
 	}
 }
