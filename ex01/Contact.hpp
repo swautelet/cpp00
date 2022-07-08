@@ -1,6 +1,7 @@
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 # include <iostream>
+# include <iomanip>
 
 class contact{
 	public:
@@ -13,6 +14,7 @@ class contact{
 
 	private:
 		int	index;
+		int	flagset;
 		std::string firstname;
 		std::string lastname;
 		std::string nickname;

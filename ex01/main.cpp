@@ -1,6 +1,13 @@
 #include<string>
 #include<iostream>
 #include "Phonebook.hpp"
+#include <csignal>
+
+void	signalhandler(int signal)
+{
+	(void)signal;
+	return ;
+}
 
 int	main()
 {
@@ -12,6 +19,7 @@ int	main()
 	std::string darkestsecret;
 	std::string i;
 	Phonebook book;
+	signal(SIGINT, signalhandler);
 
 	while (str != "EXIT")
 	{

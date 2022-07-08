@@ -21,5 +21,6 @@ int main(int argc, char **argv)
 	{
 		display_maj(argv[i]);
 	}
+	std::cout << std::endl;
     return 0;
 }
