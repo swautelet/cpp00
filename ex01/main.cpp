@@ -12,12 +12,12 @@ void	signalhandler(int signal)
 int	main()
 {
 	std::string str = "";
-	std::string firstname;
-	std::string lastname;
-	std::string nickname;
-	std::string phone;
-	std::string darkestsecret;
-	std::string i;
+	std::string firstname = "";
+	std::string lastname = "";
+	std::string nickname = "";
+	std::string phone = "";
+	std::string darkestsecret = "";
+	std::string i = "";
 	Phonebook book;
 	signal(SIGINT, signalhandler);
 
@@ -28,17 +28,37 @@ int	main()
 		
 		if (str == "ADD")
 		{
-			std::cout << "Enter firstname :";
-			getline(std::cin, firstname);
-			std::cout << "Enter lastname :";
-			getline(std::cin, lastname);
-			std::cout << "Enter nickname :";
-			getline(std::cin, nickname);
-			std::cout << "Enter phone :";
-			getline(std::cin, phone);
-			std::cout << "Enter darkest secret :";
-			getline(std::cin, darkestsecret);
+			while(firstname.length() == 0)
+			{
+				std::cout << "Enter firstname :";
+				getline(std::cin, firstname);
+			}
+			while(lastname.length() == 0)
+			{
+				std::cout << "Enter lastname :";
+				getline(std::cin, lastname);
+			}
+			while(nickname.length() == 0)
+			{
+				std::cout << "Enter nickname :";
+				getline(std::cin, nickname);
+			}
+			while(phone.length() == 0)
+			{
+				std::cout << "Enter phone :";
+				getline(std::cin, phone);
+			}
+			while(darkestsecret.length() == 0)
+			{
+				std::cout << "Enter darkest secret :";
+				getline(std::cin, darkestsecret);
+			}
 			book.addcontact(firstname, lastname, nickname, phone, darkestsecret);
+			firstname = "";
+			lastname = "";
+			nickname = "";
+			phone = "";
+			darkestsecret = "";
 		}
 		else if (str == "SEARCH")
 		{
