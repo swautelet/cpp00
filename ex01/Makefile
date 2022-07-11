@@ -1,4 +1,4 @@
-SRC = Contact.cpp Phonebook.cpp Main.cpp
+SRC = Contact.cpp Phonebook.cpp main.cpp
 NAME = Phonebook
 CFLAGS = -Werror -Wextra -Wall -std=c++98
 OBJ=$(SRC:%.cpp=%.o)
